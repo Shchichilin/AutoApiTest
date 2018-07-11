@@ -1,6 +1,8 @@
 import io.qameta.allure.Description;
-import lombok.SneakyThrows;
 import org.junit.Test;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static utils.getProperties.getApplicationProperties;
 
@@ -22,5 +24,13 @@ public class apiTest {
         System.out.println(response);
     }
 
+
+    @Test
+    @Description("Тестирование моделей API")
+    public void testApiModels(String model){
+
+
+
+    }
 
 }
