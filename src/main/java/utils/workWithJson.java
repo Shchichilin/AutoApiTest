@@ -22,26 +22,4 @@ public class workWithJson {
             org.apache.http.HttpResponse response = httpClient.execute(request);
             return new BufferedReader(new InputStreamReader(response.getEntity().getContent(), "UTF-8")).readLine();
         }
-        public static String sendGetRequest(String urlApi, String json) throws Exception {
-                try (CloseableHttpClient client = HttpClientBuilder.create().build()) {
-
-                    HttpGet request = new HttpGet(urlApi);
-                    HttpResponse response = client.execute(request);
-
-                    BufferedReader bufReader = new BufferedReader(new InputStreamReader(
-                            response.getEntity().getContent()));
-
-                    StringBuilder builder = new StringBuilder();
-
-                    String line;
-
-                    while ((line = bufReader.readLine()) != null) {
-                        builder.append(line);
-                        builder.append(System.lineSeparator());
-                    }
-
-                    System.out.println(builder);
-                }
-            return urlApi;
-        }
 }

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class dictionary {
-    public void organization(String model){
+    public static String organization(String model){
         Map<String, String> organization = new HashMap<String, String>();
         organization.put("model", "3441010551"); // для получения модели
         organization.put("event", "3441010551"); // для получения определённого свойства
@@ -33,7 +33,7 @@ public class dictionary {
         organization.put("license","7704211201");
         organization.put("other","7704211201"); // # для получения всех остальных свойств
         //organization.put("","");
-        System.out.println(organization.get(model));
-
+        String inn = organization.get(model);
+        return inn;
     }
 }

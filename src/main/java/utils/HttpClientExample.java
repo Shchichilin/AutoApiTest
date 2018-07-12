@@ -15,15 +15,7 @@ public class HttpClientExample {
 
         HttpClient client = new DefaultHttpClient();
         HttpGet request = new HttpGet(url);
-        String USER_AGENT = "Mozilla/5.0";
-        // add request header
-        request.addHeader("User-Agent", USER_AGENT);
-
         HttpResponse response = client.execute(request);
-
-        System.out.println("\nSending 'GET' request to URL : " + url);
-        System.out.println("Response Code : " +
-                response.getStatusLine().getStatusCode());
 
         BufferedReader rd = new BufferedReader(
                 new InputStreamReader(response.getEntity().getContent()));
@@ -36,7 +28,7 @@ public class HttpClientExample {
 
         //System.out.println(result.toString());
 
-        return String.valueOf(result);
+        return result.toString();
     }
 
 }
