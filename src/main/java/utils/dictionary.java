@@ -36,4 +36,22 @@ public class dictionary {
         String inn = organization.get(model);
         return inn;
     }
+
+    public static String entrepreneur(String model){
+        Map<String, String> entrepreneur = new HashMap<String, String>();
+        entrepreneur.put("model","641901324491");
+        entrepreneur.put("model-list","250500383158");
+        entrepreneur.put("license","781612806543");
+        entrepreneur.put("okved","772333709256");
+        entrepreneur.put("planned-inspection","024700158025");
+        entrepreneur.put("unfair-compliant-inclusion","190122108234");
+        entrepreneur.put("unfair-compliant","190122108234");
+        entrepreneur.put("unplanned-inspection","251100055570");
+        entrepreneur.put("source-file","222500327630");
+        entrepreneur.put("headed","190200291847");
+        entrepreneur.put("leader_in","7712040126");
+        entrepreneur.put("other","641901324491");
+        String inn = entrepreneur.get(model);
+        return inn;
+    }
 }
