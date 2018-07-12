@@ -1,12 +1,9 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.Description;
-import jdk.nashorn.internal.runtime.regexp.joni.exception.ErrorMessages;
 import org.junit.Assert;
 import org.junit.Test;
-import utils.dictionary;
+import utils.Dictionary;
 import utils.getModels;
 
-import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -67,6 +64,10 @@ public class apiTest {
         if (!getModels.getModels(url, "organization")){
             Assert.fail("Не найдена модель organization в API");
         }
+
+        Set a = Dictionary.organization.keySet();
+
+
 
     }
 

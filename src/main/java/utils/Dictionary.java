@@ -3,12 +3,13 @@ package utils;
 import java.util.HashMap;
 import java.util.Map;
 
-public class dictionary {
-    public static String dictOrganization(String model){
-        Map<String, String> organization = new HashMap<String, String>();
-        organization.put("model", "3441010551"); // для получения модели
-        organization.put("event", "3441010551"); // для получения определённого свойства
-        organization.put("address-history", "3804999814");
+public class Dictionary {
+    public static Map<String, String> organization = new HashMap<String, String>();
+
+    static {
+        organization.put("model","3441010551"); // для получения модели
+        organization.put("event","3441010551"); // для получения определённого свойства
+        organization.put("address-history","3804999814");
         organization.put("invalid-address","3250517943");
         organization.put("invalid-data","3442112524");
         organization.put("unfair-compliant-inclusion","1901117599");
@@ -32,10 +33,8 @@ public class dictionary {
         organization.put("okved","7730161765");
         organization.put("license","7704211201");
         organization.put("other","7704211201"); // # для получения всех остальных свойств
-        //organization.put("","");
-        String inn = organization.get(model);
-        return inn;
-    }
+    //organization.put("","");
+}
 
     public static String entrepreneur(String model){
         Map<String, String> entrepreneur = new HashMap<String, String>();
@@ -52,6 +51,16 @@ public class dictionary {
         entrepreneur.put("leader_in","7712040126");
         entrepreneur.put("other","641901324491");
         String inn = entrepreneur.get(model);
+        return inn;
+    }
+
+    public static String getInnFromDictionary (String dictionary, String modelName){
+        String inn = null;
+        if (dictionary == "organization"){
+            inn = organization.get(modelName);
+        }
+        if (dictionary == "entrepreneur"){
+        }
         return inn;
     }
 }
