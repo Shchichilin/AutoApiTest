@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class dictionary {
-    public static String organization(String model){
+    public static String dictOrganization(String model){
         Map<String, String> organization = new HashMap<String, String>();
         organization.put("model", "3441010551"); // для получения модели
         organization.put("event", "3441010551"); // для получения определённого свойства
